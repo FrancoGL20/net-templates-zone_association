@@ -169,7 +169,7 @@ try:
                 driver.switch_to.parent_frame() # n: i2ui_shell_content
                 wait.until(EC.frame_to_be_available_and_switch_to_it((By.NAME,"results"))) # n: results
 
-                write_html_in_file(driver.page_source)
+                # write_html_in_file(driver.page_source)
                 try:
                     wait_fast.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "span.success")))
                     temp_file.write(f"{line[0:len(line)-1]},TRUE\n")
